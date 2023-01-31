@@ -38,6 +38,9 @@ class Management:
 
 class Ticket:
     def __init__(self, ticket_type, ticket_amount=0):
+        # P1 => one way ticket
+        # P2 => chargable ticket
+        # P3 => chargable and time zone ticket
         self.ticketType = ticket_type
         self.ticket_amount = ticket_amount
         self.ticket_serial = str(uuid.uuid4())
