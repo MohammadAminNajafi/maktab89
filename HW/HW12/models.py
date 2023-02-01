@@ -10,7 +10,8 @@ class Client:
         self.tickets = []
 
     def buy_ticket(self, ticket):
-        self.tickets.append(ticket)
+        if isinstance(ticket, Ticket):
+            self.tickets.append(ticket)
         return self.tickets
 
 

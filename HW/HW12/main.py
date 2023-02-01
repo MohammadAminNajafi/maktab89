@@ -34,8 +34,8 @@ if login_type == 1:
     elif use_type == 2:
         print('Registering')
         input_ssn = input('Please enter your ssn:')
-        first_name = input('Please enter your firstName:')
-        last_name = input('Please enter your lastName:')
+        input_first_name = input('Please enter your firstName:')
+        input_last_name = input('Please enter your lastName:')
         print('''
         select one ticket of ticket_type:
         \t1_one way ticket
@@ -43,6 +43,7 @@ if login_type == 1:
         \t3_chargable and time zone ticket''')
         ticket_type = int(input())
         ticket = Ticket(ticket_type)
+        client = Client(first_name=input_first_name, last_name=input_last_name, ssn=input_ssn, )
         with open(f'/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/Client/{input_ssn}.cli', 'wb') as client_info_file:
             pickle.dump(client_info_file, client_info_file)
         # baiad user ro azash besazim
