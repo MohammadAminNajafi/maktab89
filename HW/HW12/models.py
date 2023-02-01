@@ -38,7 +38,7 @@ class Management:
 
 class Ticket:
     def __init__(self, ticket_type, ticket_amount=0):
-        # P1 =>
+        # P1 => one way ticket
         # P2 => chargable ticket
         # P3 => chargable and time zone ticket
         self.ticketType = ticket_type
@@ -48,3 +48,11 @@ class Ticket:
     def ticket_charge(self, amount):
         self.ticket_amount += amount
         return self.ticket_amount
+
+    @classmethod
+    def ticket_amount(cls, ticket_type, ticket_amount=0):
+        if ticket_type == 1:
+
+            return cls(ticket_type, ticket_amount + 200)
+
+
