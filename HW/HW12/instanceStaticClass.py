@@ -15,6 +15,16 @@ class Person:
     def from_birth(cls, name, height, age):
         return cls(name, height, datetime.datetime.now().year - age)
 
+    @staticmethod
+    def is_adult(age):
+        if age > 18:
+            return 'user is adult'
+        else:
+            return 'user is not adult'
 
 result = Person.from_birth('PEAMAN', 185, 2003).show()
 print(result)
+
+print(Person.is_adult(4))
+
+
