@@ -43,12 +43,15 @@ if login_type == 1:
         \t3_chargable and time zone ticket''')
         ticket_type = int(input())
         ticket = Ticket(ticket_type)
-
         client = Client(first_name=input_first_name, last_name=input_last_name, ssn=input_ssn)
         client.buy_ticket(ticket)
         with open(f'/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/Client/{input_ssn}.cli', 'wb') as client_info_file:
             pickle.dump(client_info_file, client_info_file)
         # baiad user ro azash besazim
+
+print('\t1_buy a ticket')
+print('\t2_Trip')
+print('\t3_exit')
 
 
 
