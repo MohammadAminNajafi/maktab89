@@ -38,7 +38,7 @@ class Management:
 
 class Ticket:
     def __init__(self, ticket_type, ticket_amount=0):
-        # P1 => one way ticket
+        # P1 =>
         # P2 => chargable ticket
         # P3 => chargable and time zone ticket
         self.ticketType = ticket_type

@@ -36,6 +36,13 @@ if login_type == 1:
         input_ssn = input('Please enter your ssn:')
         first_name = input('Please enter your firstName:')
         last_name = input('Please enter your lastName:')
+        print('''
+        select one ticket of ticket_type:
+        \t1_one way ticket
+        \t2_chargable ticket
+        \t3_chargable and time zone ticket''')
+        ticket_type = int(input())
+
         with open(f'/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/Client/{input_ssn}.cli', 'wb') as client_info_file:
             pickle.dump(client_info_file, client_info_file)
         # baiad user ro azash besazim
