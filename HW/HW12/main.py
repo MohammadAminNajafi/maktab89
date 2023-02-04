@@ -4,6 +4,13 @@ import os
 
 
 print('Welcome to the metro of Tehran ')
+client_amount = len(os.listdir('/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/Client/'))
+if client_amount <= 0:
+    print('No any Client ')
+
+else:
+    print(f'There is/are {client_amount} client')
+
 print('1_Client login')
 print('2_Admin login')
 
@@ -27,7 +34,7 @@ if login_type == 1:
 
     if use_type == 1:
 
-        input_ssn = input('Please enter your ssn')
+        input_ssn = input('Please enter your ssn:')
         with open(f'/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/Client/{input_ssn}.cli', 'rb') as client_info_file:
             client_info = pickle.load(client_info_file)
 
@@ -49,19 +56,20 @@ if login_type == 1:
             pickle.dump(client_info_file, client_info_file)
         # baiad user ro azash besazim
 
-print('\t1_buy a ticket')
-print('\t2_Trip')
-print('\t3_exit')
+    print('\t1_buy a ticket')
+    print('\t2_Trip')
+    print('\t3_exit')
+
+    option = int(input())
+    if option == 1:
+        pass
+    elif option == 2:
+        bank_account_management = BankAccountManagement()
+        bank_account_management.process_ticket(client)
 
 
 
 
-client_amount = len(os.listdir('/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/Client/'))
-if client_amount <= 0:
-    print('No any Client ')
-
-else:
-    print(f'There is/are {client_amount} client')
 
 
 

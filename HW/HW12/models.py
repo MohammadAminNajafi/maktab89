@@ -16,6 +16,7 @@ class Client:
 
 
 class BankAccountManagement:
+    # Gate
     def __init__(self):
         pass
 
@@ -53,7 +54,6 @@ class Ticket:
     @classmethod
     def ticket_amount(cls, ticket_type, ticket_amount=0):
         if ticket_type == 1:
-
             return cls(ticket_type, ticket_amount + 200)
 
 
