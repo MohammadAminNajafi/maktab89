@@ -66,6 +66,8 @@ if login_type == 1:
     elif option == 2:
         bank_account_management = BankAccountManagement()
         bank_account_management.process_ticket(client)
+    elif option == 3:
+        pass
 
 
 
