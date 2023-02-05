@@ -21,7 +21,7 @@ class BankAccountManagement:
         pass
 
     def process_ticket(self, client):
-        pass
+
 
     def __use_ticket(self):
         pass
