@@ -17,17 +17,28 @@ class Client:
 
 class BankAccountManagement:
     # Gate
+    cost = 1500
     def __init__(self):
         pass
 
     def process_ticket(self, client, choosed_ticket_type):
         tickets = client.tickets
+        use_ticket = object()#
         if len(tickets) <= 0:
             return -1
         else:
             for ticket in tickets:
-                if ticket.ticket_type:
-
+                if ticket.status:
+                    if ticket.ticket_type == choosed_ticket_type:
+                        use_ticket = ticket
+                        break
+            if isinstance(use_ticket, Ticket):
+                if use_ticket.ticket_type == 1:
+                    if use_ticket.ticket_amount < 1500:
+                        return -2
+                    else:
+                        use_ticket.ticket_amount -= 1500
+                        ticket = use_ticket.ticket_amount #
 
     def __use_ticket(self):
         pass
