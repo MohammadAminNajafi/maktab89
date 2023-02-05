@@ -46,6 +46,7 @@ class Ticket:
         self.ticketType = ticket_type
         self.ticket_amount = ticket_amount
         self.ticket_serial = str(uuid.uuid4())
+        self.status = True
 
     def ticket_charge(self, amount):
         self.ticket_amount += amount
