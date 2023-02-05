@@ -30,18 +30,17 @@ class BankAccountManagement:
             for ticket in tickets:
                 if ticket.status:
                     if ticket.ticket_type == choosed_ticket_type:
-                        use_ticket = ticket
+                        BankAccountManagement.__use_ticket(self, ticket)
                         break
-            if isinstance(use_ticket, Ticket):
-                if use_ticket.ticket_type == 1:
-                    if use_ticket.ticket_amount < 1500:
-                        return -2
-                    else:
-                        use_ticket.ticket_amount -= 1500
-                        ticket = use_ticket.ticket_amount #
 
-    def __use_ticket(self):
-        pass
+    def __use_ticket(self, use_ticket):
+        if isinstance(use_ticket, Ticket):
+            if use_ticket.ticket_type == 1:
+                if use_ticket.ticket_amount < 1500:
+                    return -2
+                else:
+                    use_ticket.ticket_amount -= 1500
+                    return use_ticket.ticket_amount
 
     def __charge_ticket(self):
         pass
