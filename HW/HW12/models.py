@@ -20,7 +20,13 @@ class BankAccountManagement:
     def __init__(self):
         pass
 
-    def process_ticket(self, client):
+    def process_ticket(self, client, choosed_ticket_type):
+        tickets = client.tickets
+        if len(tickets) <= 0:
+            return -1
+        else:
+            for ticket in tickets:
+                if ticket.ticket_type:
 
 
     def __use_ticket(self):
@@ -43,7 +49,7 @@ class Ticket:
         # P1 => one way ticket
         # P2 => chargable ticket
         # P3 => chargable and time zone ticket
-        self.ticketType = ticket_type
+        self.ticket_type = ticket_type
         self.ticket_amount = ticket_amount
         self.ticket_serial = str(uuid.uuid4())
         self.status = True
