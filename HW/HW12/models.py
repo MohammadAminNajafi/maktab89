@@ -31,6 +31,7 @@ class BankAccountManagement:
                 if ticket.status:
                     if ticket.ticket_type == choosed_ticket_type:
                         # BankAccountManagement.__use_ticket(self, ticket)
+                        print(ticket.ticket_amount)
                         print(BankAccountManagement.__use_ticket(self, ticket))
                         print(ticket.ticket_amount)
                         break
@@ -44,6 +45,9 @@ class BankAccountManagement:
                     use_ticket.ticket_amount -= 1500
                     # return use_ticket.ticket_amount
                     return 0
+            else:
+                if use_ticket.status and use_ticket.ticket_type == 2:
+                    use_ticket.status = False
     def __charge_ticket(self):
         pass
 
