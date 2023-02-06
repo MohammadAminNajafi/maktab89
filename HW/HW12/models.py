@@ -30,7 +30,9 @@ class BankAccountManagement:
             for ticket in tickets:
                 if ticket.status:
                     if ticket.ticket_type == choosed_ticket_type:
-                        BankAccountManagement.__use_ticket(self, ticket)
+                        # BankAccountManagement.__use_ticket(self, ticket)
+                        print(BankAccountManagement.__use_ticket(self, ticket))
+                        print(ticket.ticket_amount)
                         break
 
     def __use_ticket(self, use_ticket):

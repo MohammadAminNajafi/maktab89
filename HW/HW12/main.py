@@ -36,7 +36,8 @@ if login_type == 1:
 
         input_ssn = input('Please enter your ssn:')
         with open(f'/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/Client/{input_ssn}.cli', 'rb') as client_info_file:
-            client_info = pickle.load(client_info_file)
+            client = pickle.load(client_info_file)
+            print(client.first_name)##
 
     elif use_type == 2:
         print('Registering')
