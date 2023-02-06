@@ -40,8 +40,8 @@ class BankAccountManagement:
                     return -2
                 else:
                     use_ticket.ticket_amount -= 1500
-                    return use_ticket.ticket_amount
-
+                    # return use_ticket.ticket_amount
+                    return 0
     def __charge_ticket(self):
         pass
 
