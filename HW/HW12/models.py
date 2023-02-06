@@ -23,13 +23,13 @@ class BankAccountManagement:
 
     def process_ticket(self, client, choosed_ticket_type):
         tickets = client.tickets
-        use_ticket = object()#
         if len(tickets) <= 0:
             return -1
         else:
             for ticket in tickets:
                 if ticket.status:
                     if ticket.ticket_type == choosed_ticket_type:
+                        use_ticket = ticket
                         # BankAccountManagement.__use_ticket(self, ticket)
                         print(ticket.ticket_amount)
                         print(BankAccountManagement.__use_ticket(self, ticket))

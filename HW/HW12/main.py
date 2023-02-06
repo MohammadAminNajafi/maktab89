@@ -2,7 +2,10 @@ from models import *
 import pickle
 import os
 
-
+def update_data(input_client: Client):
+    with open(f'/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/Client/{input_client.ssn}.cli', 'wb') as client_info_file:
+        pickle.dump(input_client, client_info_file)
+        print(client.first_name)
 print('Welcome to the metro of Tehran ')
 client_amount = len(os.listdir('/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/Client/'))
 if client_amount <= 0:
@@ -72,12 +75,11 @@ if login_type == 1:
     elif option == 2:
         bank_account_management = BankAccountManagement()
         bank_account_management.process_ticket(client, selected_ticket_type)
+        update_data(client)
     elif option == 3:
         pass
 
-def update_data(input_client: Client):
-    with open(f'/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/Client/{input_client.ssn}.cli', 'wb') as client_info_file:
-        pickle.dump(input_client, client_info_file)
+
 
 
 
