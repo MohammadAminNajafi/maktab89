@@ -75,6 +75,10 @@ if login_type == 1:
     elif option == 3:
         pass
 
+def update_data(input_client: Client):
+    with open(f'/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/Client/{input_client.ssn}.cli', 'wb') as client_info_file:
+        pickle.dump(input_client, client_info_file)
+
 
 
 
