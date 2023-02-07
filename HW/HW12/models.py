@@ -1,5 +1,5 @@
 import uuid
-import datetime
+from datetime import datetime
 
 
 class Client:
@@ -58,6 +58,7 @@ class BankAccountManagement:
 
 class MetroTravelRegistration:
     def __init__(self):
+        pass
 
 
 class Management:
