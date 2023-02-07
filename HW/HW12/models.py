@@ -15,8 +15,11 @@ class Client:
             self.tickets.append(ticket)
         return self.tickets
 
+    def travel_time(self, ):
+        pass
 
-class BankAccountManagement:
+
+class Gate:
     # Gate
     cost = 2500
     def __init__(self):
@@ -33,7 +36,7 @@ class BankAccountManagement:
                         use_ticket = ticket
                         # BankAccountManagement.__use_ticket(self, ticket)
                         print(ticket.ticket_amount)
-                        print(BankAccountManagement.__use_ticket(self, ticket))
+                        print(Gate.__use_ticket(self, ticket))
                         print(ticket.ticket_amount)
                         break
 

@@ -4,17 +4,13 @@ import os
 
 def update_data(input_client: Client):
     # if isinstance(input_client, Client):
-        with open(f'/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/cards/{input_client.ssn}.pickle', 'wb') as client_info_file:
-            pickle.dump(input_client, client_info_file)
-            print(client.first_name)
+    a = []
+    a = a.append(input_client)
+    print(a)
+    with open(f'client.pickle', 'wb') as client_info_file:
+        pickle.dump(a, client_info_file)
+        print(client.first_name)
 print('Welcome to the metro of Tehran ')
-client_amount = len(os.listdir('/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/cards/'))
-if client_amount <= 0:
-    print('No any Client ')
-
-else:
-    print(f'There is/are {client_amount} client')
-
 print('1_Client login')
 print('2_Admin login')
 
@@ -39,7 +35,7 @@ if login_type == 1:
     if use_type == 1:
 
         input_ssn = input('Please enter your ssn:')
-        with open(f'/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/cards/{input_ssn}.pickle', 'rb') as client_info_file:
+        with open(f'client.pickle', 'rb') as client_info_file:
             client = pickle.load(client_info_file)
             print(client.first_name)##
 
@@ -57,9 +53,9 @@ if login_type == 1:
         client = Client(first_name=input_first_name, last_name=input_last_name, ssn=input_ssn)
         client.buy_ticket(ticket)
 
-        travel_time = int(input())
+        #ravel_time = int(input())
 
-        with open(f'/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/cards/{input_ssn}.pickle', 'wb') as client_info_file:
+        with open(f'client.pickle', 'wb') as client_info_file:
             pickle.dump(client, client_info_file)
         # baiad user ro azash besazim
 
@@ -77,8 +73,8 @@ if login_type == 1:
     if option == 1:
         pass
     elif option == 2:
-        bank_account_management = BankAccountManagement()
-        bank_account_management.process_ticket(client, selected_ticket_type)
+        Gate = Gate()
+        Gate.process_ticket(client, selected_ticket_type)
         update_data(client)
     elif option == 3:
         pass
