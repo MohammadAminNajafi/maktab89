@@ -22,6 +22,21 @@ class BankAccountManagement:
     def __init__(self):
         pass
 
+    def process_ticket(self, client, choosed_ticket_type):
+        tickets = client.tickets
+        if len(tickets) <= 0:
+            return -1
+        else:
+            for ticket in tickets:
+                if ticket.status:
+                    if ticket.ticket_type == choosed_ticket_type:
+                        use_ticket = ticket
+                        # BankAccountManagement.__use_ticket(self, ticket)
+                        print(ticket.ticket_amount)
+                        print(BankAccountManagement.__use_ticket(self, ticket))
+                        print(ticket.ticket_amount)
+                        break
+
     def __use_ticket(self, use_ticket):
         if isinstance(use_ticket, Ticket):
             if use_ticket.ticket_type == 1:
@@ -37,25 +52,12 @@ class BankAccountManagement:
     def __charge_ticket(self):
         pass
 
+    def start(self, start):
+        pass
+
 
 class MetroTravelRegistration:
     def __init__(self):
-        pass
-
-    def process_ticket(self, client, choosed_ticket_type):
-        tickets = client.tickets
-        if len(tickets) <= 0:
-            return -1
-        else:
-            for ticket in tickets:
-                if ticket.status:
-                    if ticket.ticket_type == choosed_ticket_type:
-                        use_ticket = ticket
-                        # BankAccountManagement.__use_ticket(self, ticket)
-                        print(ticket.ticket_amount)
-                        print(BankAccountManagement.__use_ticket(self, ticket))
-                        print(ticket.ticket_amount)
-                        break
 
 
 class Management:
