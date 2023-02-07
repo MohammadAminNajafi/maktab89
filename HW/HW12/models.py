@@ -17,7 +17,7 @@ class Client:
 
 class BankAccountManagement:
     # Gate
-    cost = 1500
+    cost = 2500
     def __init__(self):
         pass
 
@@ -50,6 +50,8 @@ class BankAccountManagement:
                     use_ticket.status = False
     def __charge_ticket(self):
         pass
+
+    def travel_time(self, start, end):
 
 
 class MetroTravelRegistration:

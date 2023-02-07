@@ -56,6 +56,9 @@ if login_type == 1:
         ticket = Ticket(ticket_type)
         client = Client(first_name=input_first_name, last_name=input_last_name, ssn=input_ssn)
         client.buy_ticket(ticket)
+
+        travel_time = int(input())
+
         with open(f'/home/peaman/Desktop/MANA/PEAMAN/maktab-e sharif/maktab89/HW/HW12/cards/{input_ssn}.pickle', 'wb') as client_info_file:
             pickle.dump(client, client_info_file)
         # baiad user ro azash besazim
