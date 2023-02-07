@@ -1,4 +1,5 @@
 import uuid
+import datetime
 
 
 class Client:
@@ -51,7 +52,8 @@ class BankAccountManagement:
     def __charge_ticket(self):
         pass
 
-    def travel_time(self, start, end):
+    def start(self, start):
+        pass
 
 
 class MetroTravelRegistration:
@@ -82,3 +84,4 @@ class Ticket:
             return cls(ticket_type, ticket_amount + 200)
 
 
+# زمان شروع و پایان
