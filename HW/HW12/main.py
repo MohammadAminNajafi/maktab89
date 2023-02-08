@@ -1,15 +1,17 @@
 from models import *
 import pickle
 import os
-
+# with open('user.pickle', 'wb') as u:
+#     dict1 = {}
+#     pickle.dump(dict1, u)
 def update_data(input_client: Client):
-    # if isinstance(input_client, Client):
-    a = []
-    a = a.append(input_client)
-    print(a)
-    with open(f'client.pickle', 'wb') as client_info_file:
-        pickle.dump(a, client_info_file)
-        print(client.first_name)
+    assert isinstance(input_client, Client)
+    with open("user.pickle", "rb") as u:
+        dict1 = pickle.load(u)
+
+    with open("user.pickle", "wb") as u:
+        dict1[input_client.ssn] = Client(input_client.first_name, input_client.last_name, input_client.ssn)
+        pickle.dump(dict1, u)
 print('Welcome to the metro of Tehran ')
 print('1_Client login')
 print('2_Admin login')
@@ -52,6 +54,7 @@ if login_type == 1:
         ticket = Ticket(ticket_type)
         client = Client(first_name=input_first_name, last_name=input_last_name, ssn=input_ssn)
         client.buy_ticket(ticket)
+        update_data(client)
 
         #ravel_time = int(input())
 
