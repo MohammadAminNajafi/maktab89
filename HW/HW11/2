@@ -1,0 +1,17 @@
+2_1
+DELETE FROM Customer WHERE Country='Spain';
+
+
+
+2_2
+UPDATE 'Order' SET OrderDate='2021-06-20', ShipCountry= 'Germany' WHERE CustomerID='VICTE';
+
+
+
+2_3
+INSERT INTO Shipper(id, CompanyName, Phone) VALUES(4, 'PEAMAN', '(403) 434-6097'), (5, 'MANA', '(443) 143-9797');
+
+
+
+2_4
+SELECT * FROM Product WHERE UnitPrice<50 AND Discontinued<1;
