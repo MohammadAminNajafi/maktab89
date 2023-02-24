@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        input[type="text"],
+        select {
+            width: 500px;
+            height: 43px;
+            margin: 5px;
+            border-width: .5px;
+            border-color: gray
+        }
+
+        #submit {
+            border-radius: 25px;
+            background: #B1FE00;
+            padding: 20px;
+            width: 300px;
+            height: 50px;
+        }
+    </style>
+
+</head>
+
+<body dir="rtl">
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <div>
+
+            <form>
+                <h2>تماس با تیم باما</h2>
+                <h4>خیالتان راحت باشد، فقط کارشناسان باما این اطلاعات را می‌بینند<h4>
+                        <input placeholder="نام و نام خانوادگی" type="text" id="fname" name="fname"><br>
+
+                        <input placeholder="ایمیل" type="text" id="lname" name="lname"><br>
+
+                        <input placeholder="شماره موبایل" type="text" id="Phonenumber" name="Phonenumber"><br>
+
+                        <label>
+
+                            <select>
+
+                                <option value="" disabled selected>موضوع</option>
+
+                                <option value="1">پشتیبانی فنی</option>
+                                <option value="2">مدیریت</option>
+                                <option value="3">روابط عمومی و تبلیغات</option>
+                                <option value="4">پیشنهاد و انتقاد</option>
+                                <option value="5">سایر</option>
+
+                            </select><br>
+
+                        </label><br><br>
+
+                        <textarea placeholder="پیام خود را اینجا برای ما بنویسید با تشکر برادران گروه ۵" rows="10"
+                            cols="61" id="textarea" name="textarea"></textarea><br><br>
+
+                        <!-- <button>ارسال</button> -->
+                        <input type="submit" id="submit" name="submit" value="ارسال">
+
+            </form>
+        </div>
+        <div>
+            <div style="margin-right: 200px; margin-top: 100px; display: flex; flex-direction: column; justify-content: center;">
+                <div style="display: flex;">
+                    <img style="margin-top: 20px;" src="phone.PNG" width="60px">
+                    <p>02133333333<br>
+                        02166666666
+                    </p>
+                </div>
+                <div style="display: flex;">
+                    <img style="margin-top: 20px;" src="home.PNG" width="60px">
+                    <p>شنبه تا چهارشنبه از 09:00 تا 22:00 و پنج‌شنبه
+                        از
+                        9:00 تا 14:00 به غیر از روزهای تعطیل
+                    </p>
+                </div>
+                <div style="display: flex;">
+                    <img style="margin-top: 20px;" src="email.PNG" width="60px">
+                    <p>info@test.ir
+                    </p>
+                </div>
+                <div style="display: flex;">
+                    <img style="margin-top: 20px;" src="location.PNG" width="60px">
+                    <p>تهران سعادت آباد بالاتر از میدان کاج
+                    </p>
+                </div>
+                <div style="margin-left: 200px; margin-top: 50px;">
+                    <img src="Enamad.PNG" width="200px">
+        
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
