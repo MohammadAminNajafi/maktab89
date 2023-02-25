@@ -1,12 +1,11 @@
-# from fastapi import FastAPI, HTTPException
-# import requests
-#
-# app = FastAPI()
-#
-# @app.exception_handlers(HTTPException)
-# async def handler(request, exc):
-#     if exc.status_code == 500:
-#         url = 'https://127.0.0.1'
+from fastapi import FastAPI, HTTPException
+
+app = FastAPI()
+
+@app.get('/response')
+def error_handler():
+    raise HTTPException(status_code=500, detail='Error Handler')
+
 
 
 
