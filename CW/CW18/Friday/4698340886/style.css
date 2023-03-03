@@ -1,0 +1,35 @@
+* {
+
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+img {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+table {
+    vertical-align: middle;
+
+}
+.records {
+    align-items: stretch;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+th {
+    margin-top: 50px;
+}
+td {
+    align-items: stretch;
+    margin-top: 100px;
+}
+p {
+    margin-top: 60px;
+}
+span[class^=badge]{
+    margin-top: 70px;
+}
