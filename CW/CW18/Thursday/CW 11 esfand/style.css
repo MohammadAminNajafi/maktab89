@@ -1,0 +1,48 @@
+@font-face {
+    font-family: mitra;
+    src: url(fonts/mitra.otf);
+    src: url(fonts/mitra.ttf) format(ttf);
+}
+
+* {
+    font-family: mitra;
+}
+
+body{
+    background: #7723EA;
+}
+
+.main{
+    background: white;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 5%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 30px 5px #000;
+
+}
+
+input[type=text]{
+    margin-bottom:5%;
+    border-radius: 5px;
+    width: 50%;
+    height: 4%;
+}
+
+#gender{
+    width: 50%;
+    margin-bottom: 5%;
+}
+
+select{
+    border-radius: 5px;
+    margin-bottom: 5%;
+    box-shadow: 1px 1px black;
+}
+
+textarea{
+    max-width: 50%;
+    min-width: 50%;
+}
